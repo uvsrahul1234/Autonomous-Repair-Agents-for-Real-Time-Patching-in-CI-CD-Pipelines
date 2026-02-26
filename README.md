@@ -1,2 +1,6 @@
-# Autonomous-Repair-Agents-for-Real-Time-Patching-in-CI-CD-Pipelines
-Autonomous Software Repair: A RAG-Augmented Agent for Real-Time Vulnerability Patching in CI/CD Pipelines
+# Autonomous Software Repair: A RAG-Augmented Agent for Real-Time Vulnerability Patching in CI/CD Pipelines
+
+## Introduction and background
+Modern software development relies heavily on Continuous Integration/Continuous Deployment (CI/CD) pipelines to maintain speed and quality. However, security vulnerabilities (CVEs) remain a critical bottleneck during this process. While tools like SonarQube, DAST and SAST can identify thousands of vulnerabilities, fixing them requires manual effort, often leading to a "backlog" of unpatched security risks. 
+This project introduces an "Autonomous Reliable Mechanism" using an AI agent capable of not only detecting security bugs but autonomously writing patches, generating unit tests, and verifying the fix in a sandbox environment. By combining Retrieval-Augmented Generation (RAG) with a rigorous "Test-Driven Repair" loop, the agent locates vulnerabilities, generates code patches, writes regression tests, and verifies the fix in a sandboxed Docker environment. 
+The present status of the project is in the architectural design and data selection phase. The main necessity to implement this is to reduce the "Mean Time to Remediate" (MTTR) for critical vulnerabilities. This usually takes weeks and we want to reduce it to minutes. An autonomous agent can reduce this to minutes, securing systems before exploits are weaponized. By implementing this project, we expect to master Agentic Software Engineering (using LLMs to interact with compilers and test suites), Dockerized Sandboxing, and Retrieval-Augmented Generation (RAG) for large codebases. 
