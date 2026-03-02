@@ -19,4 +19,23 @@ The specific objectives of this research are:
 To discover optimal prompting strategies (e.g., Chain-of-Thought) that allow LLMs to isolate the root cause of a CVE within a large codebase. 
 To establish a "Self-Healing Loop" where the agent iteratively refines its code based on compiler errors and test failures inside a Docker container. 
 To determine the feasibility of "Explainable Patching" (XAI) which requires the agent to generate a natural language "Security Impact Statement" that links the code change to the specific attack vector it prevents. 
- 
+
+## Research Design and Methodology 
+This project uses a Constructive Research Approach, building a prototype system and evaluating it experimentally. 
+
+# Phase 1: Environment Setup (The Sandbox) 
+Develop a Docker environment which is used as isolated environment. This will allow the agent to clone repositories, install dependencies, and run tests without risking the host machine. 
+Design a Python interface that accepts a GitHub URL and returns test logs. 
+
+# Phase 2: RAG Context Engine 
+Implement a Retrieval-Augmented Generation (RAG) pipeline using LangChain. 
+The agent will index the target repository to understand not just the vulnerable file, but the usages of that function across the project to prevent breaking changes. 
+
+# Phase 3: The Agentic Repair Loop (Core Algorithm) 
+Diagnose: The agent analyzes the CVE report and writes a "Reproduction Script" (a new test case) that fails because of the bug. 
+Patch: The agent generates a code fix. 
+Verify: The agent runs the full test suite in Docker. 
+If tests pass: Proceed to Reporting. 
+If tests fail: Feed the error log back to the LLM and return to Step B. 
+# Phase 4: XAI Reporting 
+The agent generates a Pull Request Description explaining why the change was made (e.g., "Sanitized input in login.py to prevent SQL Injection per CWE-89"). 
