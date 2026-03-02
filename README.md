@@ -40,3 +40,7 @@ If tests fail: Feed the error log back to the LLM and return to Step B.
 
 ### Phase 4: XAI Reporting 
 The agent generates a Pull Request Description explaining why the change was made (e.g., "Sanitized input in login.py to prevent SQL Injection per CWE-89"). 
+
+## SWE-bench Lite Dataset 
+SWE-bench Lite is the most suitable dataset for this project because it consists of real-world GitHub issues and their corresponding Pull Requests from popular Python repositories (like Django, scikit-learn, and Flask). Unlike synthetic datasets that use simple "fill-in-the-blank" coding problems, SWE-bench requires the agent to navigate a repository-level context, understanding how a change in one file affects the rest of the system. The "Lite" version (300 selected issues) is specifically optimized for evaluation efficiency, making it computationally feasible for a student project while still providing a statistically significant benchmark for verifying the agent's ability to solve complex, multi-file software defects. 
+Dataset Link: https://www.swebench.com/lite.html (Hugging Face: princeton-nlp/SWE-bench_Lite) 
