@@ -49,8 +49,8 @@ Dataset Link: https://www.swebench.com/lite.html (Hugging Face: princeton-
 This project addresses a fundamental bottleneck in modern software engineering which is the widening gap between vulnerability detection and vulnerability remediation. While Static Application Security Testing (SAST) tools have automated the discovery of security flaws, the remediation process remains a manual, labor-intensive, and error-prone endeavor. The primary contribution of this work lies in its novel "Test-Driven Repair" methodology, which constrains the stochastic nature of Large Language Models (LLMs) with the rigorous determinism of compiler feedback and regression testing. This project bridges the gap between Software Security and Generative AI. By automating the "boring but critical" work of vulnerability patching, we can significantly improve software supply chain security. The "Self-Healing Code" framework proposes a future where software maintains itself, allowing human developers to focus on innovation rather than maintenance. 
 
 ## References/Selected Bibliography 
-Jimenez, C., et al. (2024). SWE-bench: Can Language Models Resolve Real-World GitHub Issues?  
+* Jimenez, C., et al. (2024). SWE-bench: Can Language Models Resolve Real-World GitHub Issues?  
 https://arxiv.org/abs/2310.06770  
-Bhatt, M., et al. (2024). CyberSecEval 2: A Wide-Ranging Cybersecurity Evaluation Suite for Large Language Models. https://arxiv.org/abs/2404.13161  
-C. Xia and L. Zhang (2023). Keep the Conversation Going: Fixing 162 out of 337 bugs for $0.42 each using ChatGPT.  https://arxiv.org/abs/2304.00385  
-Security Today (2025). 2025 Software Vulnerability Ratings Report. https://securitytoday.com/articles/2025/06/02/software-vulnerabilities-surged-61-percent-in-2024-according-to-new-report.aspx 
+* Bhatt, M., et al. (2024). CyberSecEval 2: A Wide-Ranging Cybersecurity Evaluation Suite for Large Language Models. https://arxiv.org/abs/2404.13161  
+* C. Xia and L. Zhang (2023). Keep the Conversation Going: Fixing 162 out of 337 bugs for $0.42 each using ChatGPT.  https://arxiv.org/abs/2304.00385  
+* Security Today (2025). 2025 Software Vulnerability Ratings Report. https://securitytoday.com/articles/2025/06/02/software-vulnerabilities-surged-61-percent-in-2024-according-to-new-report.aspx 
